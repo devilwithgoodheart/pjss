@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<script>
+know = {
+
+"Hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi,I am Dr. Kabir Singh <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Are you Sick?",
+"hello" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi,I am Dr. Kabir Singh <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Are you Sick? ",
+"HELLO" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Hi,I am Dr. Kabir Singh <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Are you Sick?",
+"yes" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Tell me Your one problem! <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Cold,Fever,Cough,Ulcer,Headace,Bodypain",
+"Yes" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Tell me Your one problem! <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Cold,Fever,Cough,Ulcer,Headace,Bodypain",
+"Fever" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms-> sweating,weakness,Loss of appetite <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> dolo 650,aspirin",
+"fever" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms-> sweating,weakness,Loss of appetite <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> dolo 650,aspirin",
+"Cold" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms-> Runny nose,sneezing,congestion <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> okacet",
+"cold" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms-> Runny nose,sneezing,congestion <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> okacet",
+"Cough" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Hoarness,shortness of breathing <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Benadryl syrup",
+"cough" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Hoarness,shortness of breathing <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Benadryl syrup",
+"Ulcer" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Heartburn,vomiting <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Cobadex tablet",
+"ulcer" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Heartburn,vomiting <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Cobadex tablet",
+"Headace" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Tightness,Nausea<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Saridon tablet",
+"headace" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Tightness,Nausea<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> Saridon tablet",
+"Bodypain" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Tired,weakness<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> ultracet tablet",
+"bodypain" :"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp symptoms->Tired,weakness<br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Medicine-> ultracet tablet",
+
+"no" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp then Bye,Nice to meet You!! ",
+"No" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp then Bye,Nice to meet You!! ",
+
+"ok" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp then Bye,Nice to meet You!! ",
+"Ok" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp then Bye,Nice to meet You!! ",
+
+"OK" : "&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp then Bye,Nice to meet You!! "}
+function talk() {
+var user = document.getElementById("userBox").value;
+document.getElementById("userBox").value= "";
+document.getElementById("chatLog").innerHTML += user+"<br><br>";
+
+if (user in know) {
+document.getElementById("chatLog").innerHTML += know[user] + "<br><br>";
+} else 
+
+{
+document.getElementById("chatLog").innerHTML += "I don't understand... <br><br><br>";
+}
+}
+
+
+
+
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="bot.css">
+
+</head>
+<title>Ask Me</title>
+
+<body>
+	<div class="p1">
+    <div class="pal">
+       <h2>PJs</h2>
+		
+	</div>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+<ul>
+    <li><a href="index.html" class="line"><h3>Home</h3></a></li>
+    <li><a href="chatbot.html" class="line"><h3>Ask Me</h3></a></li>
+    <li><a href="ab.html" class="line"><h3>about</h3></a></li>
+</ul>
+</div>
+<div class="pj">
+<p id="chatLog"> &nbsp &nbsp &nbsp &nbsp- - Say Hello!! & Ok to end - - <br><br> </p>
+<br><br><br><br>
+<input id="userBox" type="text" onkeydown="if(event.keyCode == 13) {talk()}">
+</div>
+<div class="footer">
+  <p>Created By Team Gryffindor</p>
+</div>
+</body>
+
+
+
+</html>
