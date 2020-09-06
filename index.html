@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="Login.css">
+</head>
+<body>
+<div class="p1">
+    <div class="pal">
+       <h2>PJs</h2>
+		
+	</div>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+<ul>
+    <li><a href="index.html" class="line"><h3>Home</h3></a></li>
+    <li><a href="chatbot.html" class="line"><h3>Ask Me</h3></a></li>
+    <li><a href="ab.html" class="line"><h3>about</h3></a></li>
+</ul>
+</div>
+<div class="vi">
+  <h1>Our Vision</h1>
+ <h3>YOUR HOME FOR HEALTH</h3> 
+ <p>A world where trusted information transforms health and healthcare by connecting people, systems, and ideas.
+We aim to provide accessible, available & affordable online healthcare services to anyone, anytime & anywhere...Empowering people to impact health is our mission</p>
+<h2>SAVING LIVES ONE HEART AT A TIME</h2>
+  </div>
+ <button class="tu"><a href="chatbot.html">Talk to Doctor!!</a></button>
+<div class="main">
+
+<h1>Diseases</h1>
+<hr>
+<br><br>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('1' )"> Infectious Diseases</button>
+  <button class="btn" onclick="filterSelection('2')"> Deficiency Diseases</button>
+  <button class="btn" onclick="filterSelection('3')"> Physiological Diseases</button>
+</div>
+
+<!--  -->
+
+<div class="row">
+  <div class="column 1">
+    <div class="content">
+      <h4>Dengue Fever</h4>
+      <p>A fever caused by the infection with a virus transmitted by the Aedes mosquitoes.</p>
+      <p>Symptoms->Vomiting,Tiredness,High Fever.</p>
+    </div>
+  </div>
+  <div class="column 1">
+    <div class="content">
+    
+      <h4>Covid-19</h4>
+      <p>Coronaviruses (CoV) are a large family of viruses that cause illness ranging from the common cold to more severe diseases </p>
+      <p>Symptoms->fever,dry cough,tiredness</p>
+    </div>
+  </div>
+  <div class="column 1">
+    <div class="content">
+      <h4>Tuberculosis</h4>
+      <p>caused by Mycobacterium tuberculosis (MTB) bacteria. It generally affects the lungs.</p>
+       <p>Symptoms-> Chronic cough, fever, cough</p>
+    </div>
+  </div>
+  
+  <div class="column 2">
+    <div class="content">
+     
+      <h4>Rickets</h4>
+      <p>the softening and weakening of bones in children, cause of extreme and prolonged vitamin D deficiency</p>
+      <p>Symptoms-> Weak bones, bow legs</p>
+    </div>
+  </div>
+  <div class="column 2">
+    <div class="content">
+    
+      <h4>Beriberi</h4>
+      <p>Beriberi is a disease caused by a vitamin B-1 deficiency, also known as thiamine deficiency.</p>
+      <p>Symptoms-> Altered muscles,nerve degeneration</p>
+    </div>
+  </div>
+  <div class="column 2">
+    <div class="content">
+   
+      <h4>Pellagra</h4>
+      <p>Pellagra is a disease caused by a lack of the vitamin niacin (vitamin B3).</p>
+      <p>Symptoms-> dementia,diarrhea</p>
+    </div>
+  </div>
+
+  <div class="column 3">
+    <div class="content">
+      
+      <h4>Asthma</h4>
+      <p>Asthma is a condition in which your airways narrow and swell and may produce extra mucus.</p>
+      <p>Symptoms-> dementia,diarrhea</p>
+    </div>
+  </div>
+  <div class="column 3">
+    <div class="content">
+  
+      <h4>Glaucoma</h4>
+      <p>Glaucoma is a group of eye conditions that damage the optic nerve, the health of which is vital for good vision.</p>
+      <p>Symptoms-> dementia,diarrhea</p>
+    </div>
+  </div>
+  <div class="column 3">
+    <div class="content">
+  
+      <h4>Diabetes</h4>
+      <p>Diabetes is a chronic disease that occurs when the pancreas is no longer. able to make insulin</p>
+      <p>Symptoms-> dementia,diarrhea</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="footer">
+  <p>Created By Team Gryffindor</p>
+</div>
+</body>
+</html>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
